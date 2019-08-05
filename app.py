@@ -22,4 +22,4 @@ def hello_world():
     return "Simple Calculator !"
 
 if __name__ == "__main__":
-    app.run(host="3.0.251.35", debug=True)
+    app.run(host="3.0.251.35")
