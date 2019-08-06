@@ -24,7 +24,7 @@ class Visit(Resource):
     def get(self):
         prev_num = user_num.find({})[0]['count']
         new_num = prev_num + 1
-        user_num.update({}, {"$set": {"count": new_num}})
+        user_num.update_one({}, {"$set": {"count": new_num}})
         return str("hello user " + str(new_num))
 
 
