@@ -4,6 +4,7 @@ from add import Add
 from subtract import Subtract
 from multiply import Multiply
 from divide import Divide
+from user_count import Visit
 
 #Initialize FLASK app
 app = Flask(__name__)
@@ -15,6 +16,7 @@ api.add_resource(Add, "/add")
 api.add_resource(Subtract, "/subtract")
 api.add_resource(Multiply, "/multiply")
 api.add_resource(Divide, "/divide")
+api.add_resource("Visit","/hello")
 
 
 @app.route('/')
