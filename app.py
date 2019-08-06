@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_restful import Api
+from flask_restful import Api, Resource
 from add import Add
 from subtract import Subtract
 from multiply import Multiply
@@ -15,7 +15,7 @@ client = MongoClient("mongodb://db:27017")
 db = client.aNewDB
 user_num = db["user_num"]
 
-user_num.insert({
+user_num.insert_one({
     'count': 0
 })
 
