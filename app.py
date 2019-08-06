@@ -16,7 +16,7 @@ api.add_resource(Add, "/add")
 api.add_resource(Subtract, "/subtract")
 api.add_resource(Multiply, "/multiply")
 api.add_resource(Divide, "/divide")
-api.add_resource("Visit","/hello")
+api.add_resource(Visit,"/hello")
 
 
 @app.route('/')
