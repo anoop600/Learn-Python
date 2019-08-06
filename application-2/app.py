@@ -39,12 +39,10 @@ class Register(Resource):
         # Step 2: Get data
         user_name = posted_data["user_name"]
         password = posted_data["password"]
-        print(user_name)
-        print(password)
+        
         # Step 3: (Hash + salt) password and Store data
         hashed_pw = bcrypt.hashpw(password.encode('utf8'), bcrypt.gensalt(12))
 
-        print(hashed_pw)
         users.insert_one({
             "UserName": user_name,
             "Password": hashed_pw,
