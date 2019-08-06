@@ -1,8 +1,5 @@
-from pymongo import MongoClient
+from db_String import users
 import bcrypt
-client = MongoClient("mongodb://db:27017")
-db = client.sentences_database
-users = db["users"]
 
 
 def verify_pw(user_name, password):

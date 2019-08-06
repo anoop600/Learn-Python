@@ -1,9 +1,7 @@
 from flask import jsonify, request
-from pymongo import MongoClient
+from db_String import users
 import bcrypt
-client = MongoClient("mongodb://db:27017")
-db = client.sentences_database
-users = db["users"]
+
 
 
 class Register(Resource):

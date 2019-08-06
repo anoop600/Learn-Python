@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, request
-from flask_restful import Api, Resource
+from flask import Flask
+from flask_restful import Api
 from register import Register
 from store import Store
 
@@ -10,3 +10,4 @@ api = Api(app)
 
 api.add_resource(Register, "/register")
 api.add_resource(Store, "/store")
+
