@@ -5,7 +5,7 @@ from db_String import users
 
 
 class Get(Resource):
-    def get(self):
+    def post(self):
         posted_data = request.get_json()
 
         user_name = posted_data["user_name"]

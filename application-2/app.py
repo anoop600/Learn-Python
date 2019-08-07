@@ -11,7 +11,7 @@ api = Api(app)
 
 api.add_resource(Register, "/register")
 api.add_resource(Store, "/store")
-api.add_resource(Get,"/getsentence")
+api.add_resource(Get,"/get")
 
 
 if __name__ == "__main__":
