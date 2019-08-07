@@ -8,7 +8,7 @@ def user_exist(user_name):
         return True
 
 
-def verifyPw(user_name, password):
+def verify_password(user_name, password):
     if not user_exist(user_name):
         return False
     hashed_pw = users.find({

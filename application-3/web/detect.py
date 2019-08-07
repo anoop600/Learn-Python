@@ -1,6 +1,6 @@
 from flask import jsonify, request
 from db_string import users
-from helper import user_exist, verifyPw, count_tokens
+from helper import user_exist, verify_password, count_tokens
 from flask_restful import Resource
 import spacy
 
@@ -20,7 +20,7 @@ class Detect(Resource):
             }
             return jsonify(return_json)
 
-        correct_pw = verifyPw(user_name, password)
+        correct_pw = verify_password(user_name, password)
 
         if not correct_pw:
             return_json = {
