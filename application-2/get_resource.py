@@ -10,9 +10,9 @@ class Get(Resource):
 
         user_name = posted_data["user_name"]
         password = posted_data["password"]
-        print(user_name +"  "+ password)
+        
         correct_pw = verify_pw(user_name, password)
-        print(correct_pw)
+        
         if not correct_pw:
             return_json = {
                 "status": 302
