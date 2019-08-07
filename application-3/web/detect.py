@@ -1,6 +1,7 @@
 from flask import jsonify, request
 from db_string import users
 from helper import user_exist, verifyPw, count_tokens
+from flask_restful import Resource
 import spacy
 
 

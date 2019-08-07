@@ -1,6 +1,7 @@
 from db_string import users
 from flask import jsonify, request
 from helper import user_exist, count_tokens
+from flask_restful import Resource
 
 
 class Refill(Resource):
