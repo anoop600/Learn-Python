@@ -35,7 +35,7 @@ def validate_posted_data_type(posted_data):
 
 
 def check_posted_data(posted_data, method):
-    if validate_posted_data_type(posted_data) == True
+    if validate_posted_data_type(posted_data) == True:
        if (method == "divide"):
             return validate_for_divide(posted_data)
         if (method == "add" or method == "subtract" or method == "multiply"):
