@@ -27,7 +27,7 @@ class Get(Resource):
             return jsonify(return_json)
 
         sentence = users.find({
-            "user_name": user_name
+            "UserName": user_name
         })[0]["Sentence"]
         print(sentence)
         return_json = {
