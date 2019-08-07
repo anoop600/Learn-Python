@@ -14,7 +14,7 @@ class Detect(Resource):
 
         if not user_exist(user_name):
             return_json = {
-                "status": 301
+                "status": 301,
                 "msg": "Invalid Username"
             }
             return jsonify(return_json)
