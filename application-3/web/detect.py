@@ -39,7 +39,7 @@ class Detect(Resource):
             }
             return jsonify(return_json)
 
-        nlp = spacy.load(en_core_web_sm)
+        nlp = spacy.load('en_core_web_sm')
 
         text1 = nlp(text1)
         text2 = nlp(text2)
