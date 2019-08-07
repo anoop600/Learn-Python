@@ -28,7 +28,7 @@ class Register(Resource):
         })
 
         return_json = {
-            "status" = 200,
+            "status": 200,
             "msg": "You've successfully signed up to the API"
         }
         return jsonify(return_json)
