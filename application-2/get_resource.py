@@ -34,3 +34,4 @@ class Get(Resource):
             "status": 200,
             "sentence": sentence
         }
+        return jsonify(return_json)
