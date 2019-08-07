@@ -11,3 +11,6 @@ api = Api(app)
 api.add_resource(Register, "/register")
 api.add_resource(Store, "/store")
 
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
