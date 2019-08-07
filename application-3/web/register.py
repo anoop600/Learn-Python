@@ -23,7 +23,7 @@ class Register(Resource):
 
         users.insert({
             "user_name": user_name,
-            "password": hashed_pw
+            "password": hashed_pw,
             "token": 6
         })
 
