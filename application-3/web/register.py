@@ -12,7 +12,7 @@ class Register(Resource):
         user_name = posted_data["user_name"]
         password = posted_data["password"]
 
-        if user_exist():
+        if user_exist(user_name):
             return_json = {
                 "status": 301,
                 "msg": "Invalid Username"
