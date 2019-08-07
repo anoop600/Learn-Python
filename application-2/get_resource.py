@@ -25,7 +25,13 @@ class Get(Resource):
                 "status": 301
             }
             return jsonify(return_json)
-
+        users.update({
+            "UserName": user_name
+        }, {
+            "$set": {
+                "Tokens": num_tokens-1
+            }
+        })
         sentence = users.find({
             "UserName": user_name
         })[0]["Sentence"]
