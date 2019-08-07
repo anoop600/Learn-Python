@@ -15,7 +15,7 @@ def verifyPw(user_name, password):
         "user_name": user_name
     })[0]["password"]
 
-    if bcrypt.hashed_pw(password.encode('utf8'), hashed_pw) == hashed_pw:
+    if bcrypt.hashpw(password.encode('utf8'), hashed_pw) == hashed_pw:
         return True
     else:
         return False
