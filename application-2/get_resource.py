@@ -29,7 +29,7 @@ class Get(Resource):
         sentence = users.find({
             "user_name": user_name
         })[0]["Sentence"]
-
+        print(sentence)
         return_json = {
             "status": 200,
             "sentence": sentence
