@@ -27,7 +27,8 @@ class Register(Resource):
             "token": 6
         })
 
-        return_json = {"status = 200,
-                       "msg": "You've successfully signed up to the API"
-                       }
+        return_json = {
+            "status" = 200,
+            "msg": "You've successfully signed up to the API"
+        }
         return jsonify(return_json)
