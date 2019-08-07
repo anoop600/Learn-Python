@@ -2,6 +2,7 @@ from flask import jsonify, request
 from pymongo import MongoClient
 from helper import verify_pw, count_tokens
 from db_String import users
+from flask_restful import Resource
 import bcrypt
 
 

@@ -1,5 +1,6 @@
 from flask import jsonify, request
 from db_String import users
+from flask_restful import Resource
 import bcrypt
 
 
