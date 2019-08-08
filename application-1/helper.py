@@ -10,35 +10,22 @@ def return_data(status_code, message):
     return jsonify(return_json)
 
 
-def check_present_in_posted_data(posted_data):
-    return "x" not in posted_data or "y" not in posted_data
-
-
+def validate_posted_data_type(posted_data):
+    return isinstance(posted_data["x"], int) and isinstance(posted_data["y"], int)
+	
 def validate_for_divide(posted_data):
-    if check_present_in_posted_data(posted_data) == True:
-        return 301
-    elif int(posted_data["y"]) == 0:
+    if int(posted_data["y"]) == 0:
         return 302
     else:
         return 200
 
-
-def validate_for_other(posted_data):
-    if check_present_in_posted_data(posted_data) == True:
-        return 301  # missing parameter
-    else:
-        return 200  # All OK
-
-
-def validate_posted_data_type(posted_data):
-    return isinstance(posted_data["x"], int) and isinstance(posted_data["y"], int)
-
-
 def check_posted_data(posted_data, method):
-    if validate_posted_data_type(posted_data) == True:
+	if "x" not in posted_data or "y" not in posted_data:
+		return 301
+	if validate_posted_data_type(posted_data):
         if (method == "divide"):
-            return validate_for_divide(posted_data)
-        if (method == "add" or method == "subtract" or method == "multiply"):
-            return validate_for_other(posted_data)
-    else:
-        return 303  # Type mismatch required int
+			return validate_for_divide(posted_data)
+		elif(method == "add" or method == "subtract" or method == "multiply"):
+			return 200
+	else:
+        return 303 #Type mismatch required int
