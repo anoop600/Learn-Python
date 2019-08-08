@@ -10,7 +10,7 @@ services:
     depends_on: 
       - db
     volumes: 
-      - './mounted_data:/usr/src/app'
+      - './web:/usr/src/app'
 
   db:
     build: './db'
