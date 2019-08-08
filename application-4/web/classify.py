@@ -17,7 +17,7 @@ class Classify(Resource):
         return_json, error = verify_credentials(user_name, password)
         print(return_json)
         if error:
-            return jsonify(return_json)
+            return return_json
 
         tokens = users.find({
             "user_name": user_name

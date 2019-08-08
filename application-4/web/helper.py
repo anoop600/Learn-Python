@@ -29,7 +29,6 @@ def count_tokens(user_name):
     return tokens
 
 def generate_return_dictionary(status,msg):
-    print(msg)
     return_json = {
         "status": status,
         "msg": msg
