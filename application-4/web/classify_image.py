@@ -159,7 +159,7 @@ def run_inference_on_image(image):
 
     # Creates node ID --> English string lookup.
     node_lookup = NodeLookup()
-
+    print("before top_k")
     top_k = predictions.argsort()[-FLAGS.num_top_predictions:][::-1]
     for node_id in top_k:
       human_string = node_lookup.id_to_string(node_id)
