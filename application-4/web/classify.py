@@ -15,7 +15,7 @@ class Classify(Resource):
         ur = posted_data["url"]
 
         return_json, error = verify_credentials(user_name, password)
-        
+        print(return_json)
         if error:
             return jsonify(return_json)
 
