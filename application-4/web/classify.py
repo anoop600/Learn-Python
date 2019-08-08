@@ -30,7 +30,7 @@ class Classify(Resource):
         
 
         if tokens <= 0:
-            return jsonify(generate_return_dictionary(303, "Not Enough Tokens ! "))
+            return generate_return_dictionary(303, "Not Enough Tokens ! ")
 
         r = requests.get(ur)
         return_json = {}
