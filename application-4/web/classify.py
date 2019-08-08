@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask import request, jsonify
 from db_string import users
-from helper import verifyCredentials, generateReturnDictionary
+from helper import verify_credentials, generate_return_dictionary
 import requests
 import subprocess
 import json
@@ -14,7 +14,7 @@ class Classify(Resource):
         password = posted_data["password"]
         ur = posted_data["url"]
 
-        return_json, error = verifyCredentials(user_name, password)
+        return_json, error = verify_credentials(user_name, password)
         if error:
             return jsonify(return_json)
 
@@ -23,7 +23,7 @@ class Classify(Resource):
         })[0]["token"]
         print("\n\n\n\n\n\n"+str(tokens)+"\n\n\n\n\n")
         if tokens <= 0:
-            return jsonify(generateReturnDictionary(303, "Not Enough Tokens ! "))
+            return jsonify(generate_return_dictionary(303, "Not Enough Tokens ! "))
 
         r = requests.get(ur)
         return_json = {}

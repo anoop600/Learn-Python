@@ -166,7 +166,6 @@ def run_inference_on_image(image):
       score = predictions[node_id]
       return_json[human_string] = str(score)
       print('%s (score = %.5f)' % (human_string, score))
-    print(return_json)
     with open("text.txt","w") as f:
       json.dump(return_json,f)
 

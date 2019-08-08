@@ -28,17 +28,17 @@ def count_tokens(user_name):
     })[0]["token"]
     return tokens
 
-def generateReturnDictionary(status,msg):
+def generate_return_dictionary(status,msg):
     return_json = {
         "status": status,
         "msg": msg
     }
     return jsonify(return_json)
 
-def verifyCredentials(user_name,password):
+def verify_credentials(user_name,password):
     if not user_exist(user_name):
-        return generateReturnDictionary(301,"Invalid Username"), True
+        return generate_return_dictionary(301,"Invalid Username"), True
     correct_pw = verify_password(user_name,password)
     if not correct_pw:
-        return generateReturnDictionary(302, "Invalid Password"), True
+        return generate_return_dictionary(302, "Invalid Password"), True
     return None, False
