@@ -41,4 +41,4 @@ def verify_credentials(user_name,password):
     correct_pw = verify_password(user_name,password)
     if not correct_pw:
         return generate_return_dictionary(302, "Invalid Password"), True
-    return None, False
+    

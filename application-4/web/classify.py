@@ -15,6 +15,7 @@ class Classify(Resource):
         ur = posted_data["url"]
 
         return_json, error = verify_credentials(user_name, password)
+        print(return_json)
         if error:
             return jsonify(return_json)
 
@@ -26,7 +27,7 @@ class Classify(Resource):
         print("\n")
         print(tokens)
         print("\n")
-        print("\n")
+        
 
         if tokens <= 0:
             return jsonify(generate_return_dictionary(303, "Not Enough Tokens ! "))
