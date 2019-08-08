@@ -28,18 +28,6 @@ def count_tokens(user_name):
     })[0]["token"]
     return tokens
 
-def verify_pw(user_name,password):
-    if not user_exist(user_name):
-        return False
-    hashed_pw = users.find({
-        "user_name": user_name
-    })[0]["passsword"]
-
-    if bcrypt.hashpw(password.encode('utf8'), hashed_pw)==hashed_pw:
-        return True
-    else:
-        return True
-
 def generateReturnDictionary(status,msg):
     return_json = {
         "status": status,
@@ -50,7 +38,7 @@ def generateReturnDictionary(status,msg):
 def verifyCredentials(user_name,password):
     if not user_exist(user_name):
         return generateReturnDictionary(301,"Invalid Username"), True
-    correct_pw = verify_pw(user_name,password)
+    correct_pw = verify_password(user_name,password)
     if not correct_pw:
         return generateReturnDictionary(302, "Invalid Password"), True
     return None, False
