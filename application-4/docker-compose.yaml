@@ -9,7 +9,8 @@ services:
       - db
     depends_on: 
       - db
-    volumes: './mounted_data:/usr/src/app'
+    volumes: 
+      - './mounted_data:/usr/src/app'
 
   db:
     build: './db'
