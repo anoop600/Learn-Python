@@ -20,7 +20,7 @@ class Classify(Resource):
         tokens = users.find({
             "user_name": user_name
         })[0]["token"]
-
+        print("\n\n\n\n\n\n"+tokens+"\n\n\n\n\n")
         if tokens <=0:
             return jsonify(generateReturnDictionary(303,"Not Enough Tokens ! "))
 
