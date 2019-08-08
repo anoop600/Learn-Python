@@ -167,7 +167,7 @@ def run_inference_on_image(image):
       return_json[human_string] = score
       print('%s (score = %.5f)' % (human_string, score))
     with open("text.txt","w") as f:
-      json.dump(str(return_json),f)
+      json.dump(return_json,f)
 
 
 def maybe_download_and_extract():
