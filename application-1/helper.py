@@ -20,12 +20,12 @@ def validate_for_divide(posted_data):
         return 200
 
 def check_posted_data(posted_data, method):
-	if "x" not in posted_data or "y" not in posted_data:
-		return 301
-	if validate_posted_data_type(posted_data):
+    if "x" not in posted_data or "y" not in posted_data:
+        return 301
+    elif validate_posted_data_type(posted_data):
         if (method == "divide"):
-			return validate_for_divide(posted_data)
-		elif(method == "add" or method == "subtract" or method == "multiply"):
-			return 200
-	else:
+            return validate_for_divide(posted_data)
+        elif(method == "add" or method == "subtract" or method == "multiply"):
+            return 200
+    else:
         return 303 #Type mismatch required int
