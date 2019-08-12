@@ -14,9 +14,9 @@ def verify_password(user_name, password):
     if not user_exist(user_name):
         return False
 
-        hashd_pw = users.find({
-            "user_name": user_name
-        })[0]["password"]
+    hashd_pw = users.find({
+        "user_name": user_name
+    })[0]["password"]
     if bcrypt.hashpw(password.encode('utf8'), hashd_pw) == hashd_pw:
         return True
     else:
