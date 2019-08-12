@@ -3,7 +3,7 @@ from flask_restful import Resource
 from helper import verify_credentials, cash_with_user, generate_return_dictionary, debt_with_user, update_account, update_debt
 
 
-class Pay_Loan(Resource):
+class PayLoan(Resource):
     def post(self):
         posted_data = request.get_json()
         user_name = posted_data["user_name"]
