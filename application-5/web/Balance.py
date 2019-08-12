@@ -19,5 +19,5 @@ class Balance(Resource):
         }, {
             "password": 0,
             "_id": 0
-        })
+        })[0]
         return jsonify(return_json)
