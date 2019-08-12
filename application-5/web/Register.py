@@ -14,7 +14,7 @@ class Register(Resource):
             return_json = generate_return_dictionary(301, "Invalid Username")
             return return_json
 
-        hashed_pw = bcrypt.hashed_pw(password.encode('utf8'), bcrypt.gensalt())
+        hashed_pw = bcrypt.hashpw(password.encode('utf8'), bcrypt.gensalt())
         users.insert({
             "user_name": user_name,
             "password": hashed_pw,
