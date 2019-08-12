@@ -4,7 +4,7 @@ from Register import Register
 from Add import Add
 from Transfer import Transfer
 from Take_Loan import Take_Loan
-from pay_Loan import Pay_Loan
+from Pay_Loan import Pay_Loan
 from Balance import Balance
 app = Flask(__name__)
 api = Api(app)

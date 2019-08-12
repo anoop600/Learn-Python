@@ -19,3 +19,4 @@ class Pay_Loan(Resource):
         update_account(user_name, cash-money)
         update_debt(user_name, debt-money)
         return generate_return_dictionary(200, "successfully pain loan")
+    
