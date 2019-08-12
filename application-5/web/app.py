@@ -11,7 +11,7 @@ api = Api(app)
 
 
 api.add_resource(Register, "/register")
-api.add_resource(Add, "/transfer")
+api.add_resource(Add, "/add")
 api.add_resource(Transfer, "/transfer")
 api.add_resource(Balance, "/balance")
 api.add_resource(Take_Loan, "/takeloan")
